@@ -15,6 +15,8 @@ func translate(_ words: [String], callback: (String) -> Swift.Void) {
     guard var dictionaryPreferences = userDefaults.persistentDomain(forName: "com.apple.DictionaryServices") else { return }
     guard let activeDictionaries = dictionaryPreferences["DCSActiveDictionaries"] as? [String] else { return }
     //改成英汉词典
+    //词典下载： http://download.huzheng.org/zh_CN/ 懒虫简明英汉词典
+    //下载DictUnifier.app转成Dictionary.app可用的词典文件
     dictionaryPreferences["DCSActiveDictionaries"] = [
         "/Users/shuhuai/Library/Containers/com.apple.Dictionary/Data/Library/Dictionaries/lazyworm-ec.dictionary"
     ]
